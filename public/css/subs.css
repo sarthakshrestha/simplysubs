@@ -1,0 +1,76 @@
+.sub-main-container h1{
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+    font-size: 54px;
+}
+
+.sub-main-container{
+    margin: 0 auto;
+}
+
+.product-card {
+    width: 380px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 25px;
+    border: 2px solid #1a202c;
+    margin-left: 8%;
+}
+
+.product-image {
+    width: 320px;
+    height: auto;
+    background-position: center;
+    border-radius: 18px;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.product-details {
+    padding: 35px;
+}
+
+.product-title {
+    font-size: 28px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.buy-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 21px;
+}
+
+.buy-button:hover {
+    background-color: #45a049;
+}
+
+.subscription-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
