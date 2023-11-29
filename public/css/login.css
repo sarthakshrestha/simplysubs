@@ -1,0 +1,57 @@
+
+.container .navbar-brand {
+    font-size: 24px;
+    font-family: 'Urbanist', sans-serif;
+    color: black;
+}
+
+.nav-item .nav-link {
+    font-size: 21px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.container .row .justify-content-center {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px;
+}
+
+.card-login {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 14px;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(197, 197, 215, 0.71);
+    color: #1a202c;
+}
+
+
+
+.card-body {
+    padding: 15px;
+    font-size: 19px;
+
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 15px;
+}
+
+.btn-primary{
+    color: #4a5568;
+}
+
+.col-md-8.offset-md-4 button.btn-primary {
+    background-color: grey;
+    color: white;
+    border-color: black;
+    font-size: 13px;
+}
+
+.card-header{
+    font-size: 28px;
+    font-weight: bold;
+}

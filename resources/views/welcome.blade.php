@@ -1,5 +1,6 @@
 @extends('components.topbar')
 @section('banner')
+    <div class="main-container">
     <div class="header">
         <h1>SimplySubs<img class="main-logo" src="images/Logo.png" alt="logo"></h1>
         <h2>Your gateway for subscriptions simplified.</h2>
@@ -17,5 +18,9 @@
         <img src="{{url('/images/logos/hulu-icon.png')}}" alt="Hulu Icon"/>
 
         <img src="{{url('/images/logos/apple-music-icon.png')}}" alt="Apple Music Icon"/>
+    </div>
+    </div>
+    <div class="top-picks">
+        <h1>Dive into your favorite movies and shows on your preferred streaming platform with zero hassles</h1><img src="{{url('/images/banners/banner-2.png')}}" class="banner-img" alt="Banner-1"/>
     </div>
 @endsection

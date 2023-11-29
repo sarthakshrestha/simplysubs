@@ -3,28 +3,61 @@ body{
 }
 
 .header{
-    margin: 0 auto;
+    margin: 0 auto 25px;
     width: 72%;
+    background-color: rgba(0, 0, 0, 0.76);
+    border-radius: 19px;
+    box-shadow: 1px 1px 2px rgba(26, 32, 44, 0.3);
 }
 
-h1{
+.header h1 {
+    margin-left: 15%;
     font-size: 115px;
     font-family: 'Urbanist', sans-serif;
-    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 2px rgb(92, 75, 232);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    animation: typing 1.8s steps(18);
 }
 
-h2{
+@keyframes typing {
+    from {
+        width: 10%;
+
+    }
+    to {
+        width: 70%;
+
+    }
+}
+
+
+.header h2{
     font-size: 31px;
     font-family: 'Urbanist', sans-serif;
-    text-align: left;
+    color: rgba(227, 216, 216, 0.78);
+    text-align: center;
     bottom: 45px;
     position: relative;
-    display: flex;
+    animation: slideIn 1.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #main-navbar {
     font-family: Arial, sans-serif;
-    background: darkgray;
+    background: rgba(0, 0, 0, 0.65);
 }
 
 #main-navbar ul {
@@ -40,7 +73,7 @@ h2{
 
 #main-navbar li a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 18px;
     transition: color 0.3s, padding-bottom 0.3s;
@@ -99,7 +132,8 @@ h2{
     border: 2.5px solid #1a202c;
     border-radius: 13px;
     width: 850px;
-    margin: 0 auto;
+    margin: 0 auto 55px;
+
 }
 
 .subscription-container p {
@@ -107,11 +141,12 @@ h2{
     color: #333;
     text-align: center;
     margin: 0;
+    color: white;
 }
 
 .text-box{
     margin: 0 auto;
-    width: 85%;
+    width: 45%;
 }
 
 .text-box h3{
@@ -127,4 +162,32 @@ h2{
     width: 65%;
 }
 
+.top-picks {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #3b2c2c;
+}
 
+.top-picks h1 {
+    font-size: 62px;
+    font-family: 'Urbanist', sans-serif;
+    width: 55%;
+    text-align: right;
+    margin-right: 20px;
+    color: white;
+    text-shadow: 1px 1px 1px rgb(192, 168, 168);
+
+}
+
+.top-picks .banner-img {
+    height: 490px;
+    width: auto;
+    margin-left: 2%;
+    position: relative;
+}
+
+.main-container{
+    background-color: #a4acbe;
+    padding: 10px;
+}
