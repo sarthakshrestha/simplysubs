@@ -1,4 +1,5 @@
 @extends('components.topbar')
+
 @section('banner')
     <div class="main-container">
         <div class="header">
@@ -27,16 +28,14 @@
     </div>
 @endsection
 
-
 @section('banner-1')
     <div class="banner-2-container">
         <h1><img
-                src="{{url('/images/banners/banner-3.png')}}" class="banner-2-img" alt="Banner-1"/>ay swiftly and securely <br>through
+                src="{{url('/images/banners/banner-3.png')}}" class="banner-2-img" alt="Banner-1"/>ay swiftly and
+            securely <br>through
             PayPal </h1>
     </div>
 @endsection
-
-
 
 @section('footer')
     <footer>

@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <link rel="stylesheet" href="{{ asset('css/subs.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
+
+
     <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Urbanist:wght@500&display=swap"
           rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Lexend+Deca&family=Urbanist:wght@500&display=swap"
