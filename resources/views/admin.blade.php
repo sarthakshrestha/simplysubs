@@ -24,6 +24,7 @@
                     </div>
                     <button type="submit" class="buy-button">Add Subscription</button>
                 </div>
+{{--                 Comment--}}
             </div>
         </form>
     </div>
