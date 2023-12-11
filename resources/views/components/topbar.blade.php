@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <link rel="stylesheet" href="{{ asset('css/subs.css') }}">
     <link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+
 
 
     <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -73,5 +75,6 @@
 @yield('banner-1')
 @yield('main-body')
 @yield('footer')
+
 </body>
 </html>

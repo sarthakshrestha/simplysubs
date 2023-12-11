@@ -8,6 +8,29 @@
     </div>
 
     <div class="p-container">
+        <!-- Display subscription items and CRUD operations -->
+        @foreach($subscriptions as $subscription)
+            <div class="product-card-horizontal">
+                <div class="product-details">
+                    <div class="image-container">
+                        <img src="{{ url('/images/sub-images/' . $subscription->image) }}" alt="{{ $subscription->title }}" class="product-image"/>
+                    </div>
+                    <div class="product-title">{{ $subscription->title }}</div>
+                    <div class="product-description">{{ $subscription->description }}</div>
+                    <button class="buy-button">Buy Now</button>
+                    <label>
+                        <select class="subscription-select">
+                            <option value="1-month">1 Month Subscription</option>
+                            <option value="3-months">3 Months Subscription</option>
+                            <option value="6-months">6 Months Subscription</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        @endforeach
+    </div>
+
+    <div class="p-container">
 
         <div class="product-card-horizontal">
             <div class="product-details">
@@ -47,4 +70,41 @@
         </div>
     </div>
 
+@endsection
+
+@section('footer')
+    <footer>
+        <div class="row">
+            <div class="column">
+                <p>Admin Login</p>
+                <div class="sub-row">
+                    <p>Row 1 under Admin Login</p>
+                </div>
+                <div class="sub-row">
+                    <p>Row 2 under Admin Login</p>
+                </div>
+            </div>
+            <div class="column">
+                <p>Contact Us</p>
+                <div class="sub-row">
+                    <p>Row 1 under FAQ</p>
+                </div>
+                <div class="sub-row">
+                    <p>Row 2 under FAQ</p>
+                </div>
+            </div>
+            <div class="column">
+                <p>FAQ</p>
+                <div class="sub-row">
+                    <p>Row 1 under FAQ</p>
+                </div>
+                <div class="sub-row">
+                    <p>Row 2 under FAQ</p>
+                </div>
+            </div>
+        </div>
+        <div class="lower-row">
+            <p>Powered by Laravel - SimpleSubs</p>
+        </div>
+    </footer>
 @endsection
