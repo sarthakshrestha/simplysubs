@@ -7,13 +7,17 @@
             SimplySubs</h1>
     </div>
 
-    <div class="p-container">
-        <!-- Display subscription items and CRUD operations -->
+    <div class="sub-container">
         @foreach($subscriptions as $subscription)
             <div class="product-card-horizontal">
                 <div class="product-details">
                     <div class="image-container">
-                        <img src="{{ url('/images/sub-images/' . $subscription->image) }}" alt="{{ $subscription->title }}" class="product-image"/>
+                        @if($subscription->image)
+                            {{-- Use asset with storage path for images --}}
+                            <img src="{{ asset('storage/' . $subscription->image) }}" alt="{{ $subscription->title }}" class="product-image">
+                        @else
+                            <img src="{{ asset('public/images/sub-images/image-error.jpg') }}" alt="Error Image" class="product-image"/>
+                        @endif
                     </div>
                     <div class="product-title">{{ $subscription->title }}</div>
                     <div class="product-description">{{ $subscription->description }}</div>
@@ -30,7 +34,8 @@
         @endforeach
     </div>
 
-    <div class="p-container">
+
+    <div class="sub-container">
 
         <div class="product-card-horizontal">
             <div class="product-details">

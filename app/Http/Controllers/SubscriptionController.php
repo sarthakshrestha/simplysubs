@@ -20,6 +20,7 @@ class SubscriptionController extends Controller
         }
     }
 
+    // SubscriptionController.php
     public function store(Request $request)
     {
         $data = $request->validate([
@@ -28,18 +29,21 @@ class SubscriptionController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        // Upload image and get the path
-        $imagePath = $request->file('image')->store('images', 'public');
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = $image->getClientOriginalName();
+            $image->storeAs('public/images/sub-images', $imageName);
+        } else {
+            $imageName = null;
+        }
 
-        // Create a new subscription record
         Subscription::create([
             'title' => $data['title'],
             'description' => $data['description'],
-            'image' => $imagePath,
+            'image' => $imageName ? 'images/sub-images/' . $imageName : null,
         ]);
 
         return redirect()->route('admin')->with('success', 'Subscription added successfully!');
     }
 
 }
-

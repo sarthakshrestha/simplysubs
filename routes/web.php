@@ -19,17 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/subs', function(){
-//    return view('subs');
-//});
 
 Route::get('/login', function(){
     return view('login');
 });
-
-//Route::get('/subs', function(){
-//    return view('subs');
-//});
 
 Route::get('/purchase-form', function (){
     return view('checkout');
@@ -37,22 +30,15 @@ Route::get('/purchase-form', function (){
 
 Route::post('/add-product', [\App\Http\Controllers\SubscriptionController::class, 'store'])->name('admin');
 
-//Route::get('/admin', function(){
-//    return view('admin');
-//});
-
 Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
+Route::resource('/subscriptions', SubscriptionController::class);
+
 Route::post('/admin/subscribe', [SubscriptionController::class, 'store'])->name('admin.subscribe');
 
 Route::get('/subs', [SubscriptionController::class, 'index'])->name('subscriptions.index');
-
-// Route for storing subscriptions
-Route::post('/add-form', [SubscriptionController::class, 'store'])->name('admin.store');
-
-
 
 
 Auth::routes();
