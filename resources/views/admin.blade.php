@@ -24,6 +24,7 @@
                     </div>
                     <button type="submit" class="buy-button">Add Subscription</button>
                 </div>
+                <p>Please add hi-res images of the subscription</p>
 {{--                 Comment--}}
             </div>
         </form>
