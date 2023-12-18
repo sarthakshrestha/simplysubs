@@ -11,7 +11,7 @@
 
 by running the command 'copy .env.example .env' if you are on Windows or 'cp .env.example .env' if you are on macOS
 
-Make a database called 'simplysubs' through MySQL and run 'php artisan migrate' 
+Make a database called 'simplysubs' through MySQL and run 'php artisan key:generate' and then finally 'php artisan migrate' 
 
 3) Run npm install, composer install and php artisan storage:link on the terminal of the cloned directory
 
