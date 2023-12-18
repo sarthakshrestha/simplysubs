@@ -21,6 +21,7 @@ class AdminController extends Controller
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'title' => 'required|string',
             'description' => 'required|string',
+
         ]);
 
         $subscription = Subscription::findOrFail($id);
@@ -33,6 +34,7 @@ class AdminController extends Controller
 
         $subscription->title = $request->input('title');
         $subscription->description = $request->input('description');
+        $subscription->price = $request->input('price');
         $subscription->save();
 
         return redirect()->back()->with('success', 'Subscription updated successfully.');

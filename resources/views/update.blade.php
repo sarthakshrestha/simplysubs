@@ -25,6 +25,10 @@
                     <label for="description">Description:</label>
                     <textarea name="description" required>{{ $subscription->description }}</textarea>
                 </div>
+                <div class="product-price">
+                    <label for="price">Price:</label>
+                    <input type="number" name="price" value="{{ $subscription->price }}" required>
+                </div>
                 <button type="submit" class="buy-button">Update Subscription</button>
             </div>
         </div>
