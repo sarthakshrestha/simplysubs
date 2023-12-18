@@ -5,7 +5,7 @@
         <h1>Edit Subscription Item</h1>
     </div>
 
-    <form action="{{ route('admin.subscriptions.update', ['subscription' => $subscription->id]) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.subscriptions.update-subscription', ['id' => $subscription->id]) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="product-card-horizontal">
@@ -14,7 +14,7 @@
                     <label for="image">Image:</label>
                     <input type="file" name="image" accept="image/*">
                     @if($subscription->image)
-                        <img src="{{ asset('public/' . $subscription->image) }}" alt="Current Image" style="max-width: 100px;">
+                        <img src="{{ asset('storage/' . $subscription->image) }}" alt="Current Image" style="max-width: 100px;">
                     @endif
                 </div>
                 <div class="product-title">

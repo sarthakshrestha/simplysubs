@@ -26,9 +26,9 @@ class AdminController extends Controller
         $subscription = Subscription::findOrFail($id);
 
         if ($request->hasFile('image')) {
-            // Handle file upload and update the image field
-            // Example: $path = $request->file('image')->store('images', 'public');
-            // $subscription->image = $path;
+
+            $path = $request->file('image')->store('images', 'public');
+            $subscription->image = $path;
         }
 
         $subscription->title = $request->input('title');

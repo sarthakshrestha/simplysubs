@@ -43,6 +43,10 @@ Route::get('/updatesub/{id}', function ($id) {
     return view('update', ['subscription' => $subscription]);
 });
 
+Route::put('/updatesub/{id}', [AdminController::class, 'updateSubscription'])->name('admin.subscriptions.update-subscription');
+
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
