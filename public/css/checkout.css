@@ -1,35 +1,51 @@
-.checkout-form {
+.checkout-container {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
 }
 
-.checkout-container{
-    margin: 0 auto;
-    display: flex;
+.top-form {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .top-form h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-align: center;
-    align-content: center;
-    padding: 40px;
+    color: #333;
     font-family: 'Urbanist', sans-serif;
 }
+
+.form-group {
+    margin-bottom: 20px;
+    align-content: center;
+    text-align: center;
+}
+
+
 
 .checkout-form input[type="text"],
 .checkout-form input[type="email"],
 .checkout-form input[type="password"],
 .checkout-form input[type="date"] {
+    font-family: 'Lexend Deca', sans-serif;
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 3px;
     gap: 40px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="password"],
+.checkout-form input[type="date"],
+.checkout-form button[type="submit"] {
+    margin-bottom: 20px;
 }
 
 .checkout-form button[type="submit"] {
@@ -40,4 +56,12 @@
     border-radius: 3px;
     color: #fff;
     cursor: pointer;
+}
+
+label{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+order-btn{
+    font-family: 'Lexend Deca', sans-serif;
 }

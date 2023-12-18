@@ -2,23 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubscriptionController;
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 Route::get('/login', function(){
     return view('login');
@@ -40,6 +28,20 @@ Route::post('/admin/subscribe', [SubscriptionController::class, 'store'])->name(
 
 Route::get('/subs', [SubscriptionController::class, 'index'])->name('subscriptions.index');
 
+Route::prefix('admin')->group(function(){
+    Route::put('/subscriptions/{subscription}', [AdminController::class, 'update'])->name('admin.subscriptions.update');
+});
+
+Route::get('/subscriptions/{id}/edit', [AdminController::class, 'editSubscription'])->name('admin.subscriptions.edit');
+
+Route::get('/checkout', function(){
+    return view('checkout');
+});
+
+Route::get('/updatesub/{id}', function ($id) {
+    $subscription = App\Models\Subscription::findOrFail($id);
+    return view('update', ['subscription' => $subscription]);
+});
 
 Auth::routes();
 
