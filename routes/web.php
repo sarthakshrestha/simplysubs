@@ -31,13 +31,6 @@ Route::get('/updatesub/{id}', function ($id) {
 Route::put('/updatesub/{id}', [AdminController::class, 'updateSubscription'])->name('admin.subscriptions.update-subscription');
 
 
-
-
-
-
-
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
