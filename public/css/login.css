@@ -10,6 +10,11 @@
     font-family: 'Urbanist', sans-serif;
 }
 
+.login-logo{
+    width: 140px;
+    height: auto;
+}
+
 .container .row .justify-content-center {
     font-family: 'DM Serif Display', serif;
     font-size: 13px;
