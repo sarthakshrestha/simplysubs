@@ -22,10 +22,6 @@
                         <label for="description">Description:</label>
                         <textarea name="description" required></textarea>
                     </div>
-                    <div class="product-price">
-                        <label for="price">Price:</label>
-                        <input type="number" name="price" step="0.01" min="0" required>
-                    </div>
                     <button type="submit" class="buy-button">Add Subscription</button>
                 </div>
                 <p>Please add hi-res images of the subscription</p>

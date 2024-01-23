@@ -27,7 +27,6 @@ class SubscriptionController extends Controller
             'title' => 'required|string',
             'description' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'price' => 'required|numeric|min:0',
         ]);
 
         if ($request->hasFile('image')) {
@@ -42,7 +41,6 @@ class SubscriptionController extends Controller
             'title' => $data['title'],
             'description' => $data['description'],
             'image' => $imageName ? 'images/sub-images/' . $imageName : null,
-            'price' => $data['price']
         ]);
 
         return redirect()->route('admin')->with('success', 'Subscription added successfully!');

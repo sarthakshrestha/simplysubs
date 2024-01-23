@@ -21,7 +21,6 @@
                     </div>
                     <div class="product-title">{{ $subscription->title }}</div>
                     <div class="product-description">{{ $subscription->description }}</div>
-                    <div class="product-price">{{$subscription->price}}</div>
                     <button class="buy-button">Buy Now</button>
                     <label>
                         <select class="subscription-select">

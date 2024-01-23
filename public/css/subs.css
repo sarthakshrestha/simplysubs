@@ -6,14 +6,13 @@
 
 .sub-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 120px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 150px;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-    margin-left: 7%;
     margin-bottom: 30px;
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 .sub-main-container{
@@ -23,11 +22,13 @@
 .product-card-horizontal {
     background-color: #fff;
     border-radius: 18px;
+    /*box-shadow: 0 2px 2px rgba(19, 18, 18, 0.55);*/
     border: 2px solid rgba(0, 0, 0, 0.42);
+
     overflow: hidden;
     font-family: 'Lexend Deca', sans-serif;
-    margin-bottom: 10px;
-    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-left: 35px;
 }
 
 .product-image {
@@ -39,7 +40,7 @@
 }
 
 .product-details {
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -90,5 +91,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
